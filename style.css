@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0c5c5;
+}
+
+header{
+    background-color: #f0c5c5;
+}
+
+footer {
+    padding: 10px;
+    background-color: #f0c5c5;
+}
+
+nav{
+    background-color: #463636;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(235, 133, 133);
+}
