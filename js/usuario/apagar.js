@@ -11,7 +11,9 @@ button.addEventListener("click", (e) => {
         headers: { "content-type": "application/json" }
     })
         .then(resp => {
-            res.innerHTML = "usuario apagado com sucesso"
+            if (resp.status === 204) {
+                res.innerHTML = "usuario apagado com sucesso"
+            }
         })
         .then()
 })
