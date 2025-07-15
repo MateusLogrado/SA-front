@@ -1,15 +1,19 @@
 let res = document.getElementById("res")
 let button = document.getElementById("button")
 
+
 button.addEventListener("click", (e) => {
     e.preventDefault()
 
-    fetch(`http://localhost:3000/usuario`, {
+    let usuarioId = Number(document.getElementById("usuarioId").value)
+
+    fetch(`http://localhost:3000/usuario/${usuarioId}`, {
         method: "GET",
         headers: { "content-type": "application/json" }
     })
         .then(resp => resp.json())
         .then(dados => {
+            console.log(dados)
             let html = `<table border="1" cellpadding="8">
             <tr>
                 <th>Código</th>
@@ -24,22 +28,20 @@ button.addEventListener("click", (e) => {
             </tr>`
 
 
-            dados.forEach(dad =>{
                 html += `<tr>
-                <td>${dad.usuarioId}</td>
-                <td>${dad.firstName}</td>               
-                <td>${dad.lastName}</td>
-                <td>${dad.age}</td>
-                <td>${dad.email}</td>
-                <td>${dad.phone}</td>
-                <td>${dad.city}</td>
-                <td>${dad.state}</td>
-                <td>${dad.birthDate}</td>
+                <td>${dados.usuarioId}</td>
+                <td>${dados.firstName}</td>               
+                <td>${dados.lastName}</td>
+                <td>${dados.age}</td>
+                <td>${dados.email}</td>
+                <td>${dados.phone}</td>
+                <td>${dados.city}</td>
+                <td>${dados.state}</td>
+                <td>${dados.birthDate}</td>
 
             </tr>`
 
-            console.log(dad)
-        })
+
 
             html += `</table>`
             res.innerHTML = html
