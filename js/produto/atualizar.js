@@ -4,6 +4,7 @@ let button = document.getElementById("button")
 button.addEventListener("click", (e)=>{
     e.preventDefault()
 
+    let produtoId = Number(document.getElementById("produtoId").value)
     let title = document.getElementById("title").value
     let description = document.getElementById("description").value
     let category = document.getElementById("category").value
@@ -25,8 +26,8 @@ button.addEventListener("click", (e)=>{
         thumbnail: thumbnail
     }
 
-    fetch(`http://localhost:3000/produto`, {
-        method: "POST",
+    fetch(`http://localhost:3000/produto/${produtoId}`, {
+        method: "PUT",
         headers: { "content-type":"application/json" },
         body: JSON.stringify(valores)
     })
@@ -58,4 +59,41 @@ button.addEventListener("click", (e)=>{
             </tr>
         </table>`
     })
+})
+
+let buscar = document.getElementById("buscar")
+
+buscar.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    let produtoId = Number(document.getElementById("produtoId").value)
+    
+    let title = document.getElementById("title")
+    let description = document.getElementById("description")
+    let category = document.getElementById("category")
+    let price = document.getElementById("price")
+    let discountPercentage = document.getElementById("discountPercentage")
+    let stock = document.getElementById("stock")
+    let brand = document.getElementById("brand")
+    let thumbnail = document.getElementById("thumbnail")
+
+    fetch(`http://localhost:3000/produto/${produtoId}`, {
+        method: "GET",
+        headers: { "content-type": "application/json" }
+    })
+        .then(resp => resp.json())
+        .then(dados => {
+
+            title.value = dados.title
+            description.value = dados.description
+            category.value = dados.category
+            price.value = dados.price
+            discountPercentage.value = dados.discountPercentage
+            let precoFinal = price - (price * (discountPercentage / 100))
+            precoFinal.value = dados.precoFinal
+            stock.value = dados.stock
+            brand.value = dados.brand
+            thumbnail.value = dados.thumbnail
+
+        })
 })
