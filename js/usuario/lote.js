@@ -17,8 +17,8 @@ lote.addEventListener("click", (e)=>{
                 age: dad.age,
                 email: dad.email,
                 phone: dad.phone,
-                city: dad.city,
-                state: dad.state,
+                city: dad.address.city,
+                state: dad.address.state,
                 birthDate: dad.birthDate
             }
 
