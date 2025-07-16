@@ -54,7 +54,7 @@ button.addEventListener("click", (e)=>{
                 <td>${precoFinal}</td>
                 <td>${stock}</td>
                 <td>${brand}</td>
-                <td><img scr="${thumbnail}"></td>
+                <td><img src="${thumbnail}"></td>
             </tr>
         </table>`
     })

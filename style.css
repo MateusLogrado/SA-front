@@ -63,3 +63,8 @@ form button, input{
 ::placeholder{
     color: rgb(187, 150, 150);
 }
+
+.product-image {
+    width: 100px;  
+    height: auto;  
+}
