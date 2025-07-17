@@ -11,8 +11,10 @@ lote.addEventListener("click", (e)=>{
     .then(resp => resp.json())
     .then(dados=> {
         dados.users.forEach(dad => {
+
+            console.log(dad)
             const valores = {
-                firstName: dad.firtsName,
+                firstName: dad.firstName,
                 lastName: dad.lastName,
                 age: dad.age,
                 email: dad.email,
@@ -21,6 +23,8 @@ lote.addEventListener("click", (e)=>{
                 state: dad.address.state,
                 birthDate: dad.birthDate
             }
+
+            console.log(dad.firstName)
 
             fetch(`http://localhost:3000/usuario`, {
                 method: "POST",
