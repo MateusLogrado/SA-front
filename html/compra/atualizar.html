@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/compra/atualizar.js" defer></script>
+    <link rel="stylesheet" href="../../style.css">
+    <title>Atualizar</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../compra.html">voltar</a>
+            <br><br>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <h1>Sistema de atualização de Usuario</h1>
+        <br>
+        <br>
+        <br>
+        <form>
+            <label for="compraId">Digite o codigo da compra</label><br>
+            <input id="compraId" type="number"><br><br>
+            <button id="buscar">buscar</button><br><br>
+            <label for="produto_id">Digite o codigo do produto</label><br>
+            <input id="produto_id" type="number"><br><br>
+            <label for="usuario_id">Digite o codigo do usuario</label><br>
+            <input id="usuario_id" type="number"><br><br>
+            <label for="quant">Digite a quantidade que foi comprado</label><br>
+            <input id="quant" type="number"><br><br>
+            <label for="dataCompra">Digite quando foi comprando</label><br>
+            <input id="dataCompra" type="date"><br><br>
+            <label for="unitario">Digite  preço original da compra</label><br>
+            <input id="unitario" type="number"><br><br>
+            <label for="desconto">Digite o desconto</label><br>
+            <input id="desconto"><br><br>
+            <label for="precoFinal">Digite o preço final</label><br>
+            <input id="precoFinal" type="number"><br><br>
+            <select name="forma de pagamento" id="formaPag">
+                <option value="credito">credito</option>
+                <option value="debito">debito</option>
+            </select><br><br>   
+            <label for="status">Digite o status da compra</label><br>
+            <input id="status"><br><br>
+            <button id="button">atualizar</button>
+            <br><br>
+        </form>
+        <div id="res"></div>
+    </main>
+    <footer>
+        <hr>
+        <br>
+        <small>feito por: Mateus Queiroz Logrado &reg; &trade;</small>
+    </footer>
+</body>
+</html>
