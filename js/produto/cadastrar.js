@@ -35,15 +35,15 @@ button.addEventListener("click", (e)=>{
         res.innerHTML = `
                 <table border="1" cellpadding="8">
             <tr>
-                <td>${title}</td>
-                <td>${description}</td>
-                <td>${category}</td>
-                <td>${price}</td>
-                <td>${discountPercentage}</td>
-                <td>${precoFinal}</td>
-                <td>${stock}</td>
-                <td>${brand}</td>
-                <td><img src="${thumbnail}"></td>
+                <td>Nome</td>
+                <td>descrição</td>
+                <td>categoria</td>
+                <td>preço</td>
+                <td>desconto</td>
+                <td>preço final</td>
+                <td>estoque</td>
+                <td>marca</td>
+                <td>imagem</td>
             </tr>
             <tr>
                 <td>${title}</td>
