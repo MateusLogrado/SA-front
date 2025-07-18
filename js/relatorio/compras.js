@@ -27,15 +27,12 @@ button.addEventListener("click", (e) => {
 
             let html = `<table border="1" cellpadding="8">
              <tr>
+                <th>Id da compra</th>
                 <th>Usuario</th>
                 <th>Produto</th>
                 <th>Quantidade</th>
                 <th>Data da Compra</th>
-                <th>Preço Unitário</th>
-                <th>Desconto</th>
                 <th>Preço Final</th>
-                <th>Forma de Pagamento</th>
-                <th>Status</th>
             </tr>`
 
 
@@ -47,15 +44,12 @@ button.addEventListener("click", (e) => {
 
                 if(usuarioCorreto && produtoCorreto){
                     html += `            <tr>
+                <td>${dad.compraId}</td>
                 <td>${usuarioCorreto.firstName} ${usuarioCorreto.lastName}</td>
                 <td>${produtoCorreto.title}</td>
                 <td>${dad.quant}</td>
                 <td>${dad.dataCompra}</td>
-                <td>${dad.unitario}</td>
-                <td>${dad.desconto}</td>
                 <td>${dad.precoFinal}</td>
-                <td>${dad.formaPag}</td>
-                <td>${dad.status}</td>
             </tr>`
                 }
                 console.log(dad)
