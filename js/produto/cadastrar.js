@@ -9,7 +9,6 @@ button.addEventListener("click", (e)=>{
     let category = document.getElementById("category").value
     let price = document.getElementById("price").value
     let discountPercentage = document.getElementById("discountPercentage").value
-    let precoFinal = price - (price * (discountPercentage / 100)) 
     let stock = document.getElementById("stock").value
     let brand = document.getElementById("brand").value
     let thumbnail = document.getElementById("thumbnail").value
@@ -40,7 +39,6 @@ button.addEventListener("click", (e)=>{
                 <td>categoria</td>
                 <td>preço</td>
                 <td>desconto</td>
-                <td>preço final</td>
                 <td>estoque</td>
                 <td>marca</td>
                 <td>imagem</td>
@@ -51,7 +49,6 @@ button.addEventListener("click", (e)=>{
                 <td>${category}</td>
                 <td>${price}</td>
                 <td>${discountPercentage}</td>
-                <td>${precoFinal}</td>
                 <td>${stock}</td>
                 <td>${brand}</td>
                 <td><img src="${thumbnail}"></td>

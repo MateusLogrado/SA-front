@@ -21,7 +21,6 @@ button.addEventListener("click", (e) => {
                 <th>categoria</th>
                 <th>Preço</th>
                 <th>Desconto</th>
-                <th>Preço final</th>
                 <th>Estoque</th>
                 <th>Marca</th>
                 <th>Imagem</th>
@@ -40,7 +39,6 @@ button.addEventListener("click", (e) => {
                 <td>${produtoNome.category}</td>
                 <td>${produtoNome.price}</td>
                 <td>${produtoNome.discountPercentage}</td>
-                <td>${produtoNome.precoFinal}</td>
                 <td>${produtoNome.stock}</td>
                 <td>${produtoNome.brand ? produtoNome.brand : "Marca não informada"}</td>
                 <td><img src="${produtoNome.thumbnail}"></td>
