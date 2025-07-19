@@ -34,14 +34,14 @@ button.addEventListener("click", (e)=>{
         res.innerHTML = `
                 <table border="1" cellpadding="8">
             <tr>
-                <td>Nome</td>
-                <td>descrição</td>
-                <td>categoria</td>
-                <td>preço</td>
-                <td>desconto</td>
-                <td>estoque</td>
-                <td>marca</td>
-                <td>imagem</td>
+                <th>Nome</th>
+                <th>descrição</th>
+                <th>categoria</th>
+                <th>preço</th>
+                <th>desconto</th>
+                <th>estoque</th>
+                <th>marca</th>
+                <th>imagem</th>
             </tr>
             <tr>
                 <td>${title}</td>
