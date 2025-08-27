@@ -5,6 +5,8 @@ let button = document.getElementById("button")
 button.addEventListener("click", (e) => {
     e.preventDefault()
 
+    let marca
+
     let nome = document.getElementById("nome").value
 
     fetch(`http://localhost:3000/produto`, {
@@ -31,17 +33,22 @@ button.addEventListener("click", (e) => {
             )
 
             console.log(produtoNome)
+            if(dados.brand){
+                marca = dados.brand
+            }else{
+                marca = "Marca não informada"
+            }
 
 
                 html += `<tr>
-                <td>${produtoNome.title}</td>
-                <td>${produtoNome.description}</td>
-                <td>${produtoNome.category}</td>
-                <td>${produtoNome.price}</td>
-                <td>${produtoNome.discountPercentage}</td>
-                <td>${produtoNome.stock}</td>
-                <td>${produtoNome.brand ? produtoNome.brand : "Marca não informada"}</td>
-                <td><img src="${produtoNome.thumbnail}"></td>
+                <td>${dados.title}</td>
+                <td>${dados.description}</td>
+                <td>${dados.category}</td>
+                <td>${dados.price}</td>
+                <td>${dados.discountPercentage}</td>
+                <td>${dados.stock}</td>
+                <td>${marca}</td>
+                <td><img src="${dados.thumbnail}"></td>
             </tr>`
 
 
