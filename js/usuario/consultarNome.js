@@ -22,6 +22,7 @@ button.addEventListener("click", (e) => {
                 <th>idade</th>
                 <th>email</th>
                 <th>telefone</th>
+                <th>address</th>
                 <th>cidade</th>
                 <th>estado</th>
                 <th>data de nascimento</th>
@@ -42,6 +43,7 @@ button.addEventListener("click", (e) => {
                 <td>${usuarioNome.age}</td>
                 <td>${usuarioNome.email}</td>
                 <td>${usuarioNome.phone}</td>
+                <td>${usuarioNome.address}</td>
                 <td>${usuarioNome.city}</td>
                 <td>${usuarioNome.state}</td>
                 <td>${usuarioNome.birthDate}</td>

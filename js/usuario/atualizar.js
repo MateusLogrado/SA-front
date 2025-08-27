@@ -10,6 +10,7 @@ button.addEventListener("click", (e)=>{
     let age = Number(document.getElementById("age").value)
     let email = document.getElementById("email").value
     let phone = document.getElementById("phone").value
+    let address = document.getElementById("address").value
     let city = document.getElementById("city").value
     let state = document.getElementById("state").value
     let birthDate = document.getElementById("birthDate").value
@@ -20,6 +21,7 @@ button.addEventListener("click", (e)=>{
         age: age,
         email: email,
         phone: phone,
+        address: address,
         city: city,
         state: state,
         birthDate: birthDate
@@ -41,6 +43,7 @@ button.addEventListener("click", (e)=>{
                 <th>Idade</th>
                 <th>Email</th>
                 <th>Telefone</th>
+                <th>Endereço</th>
                 <th>Cidade</th>
                 <th>Estado</th>
                 <th>Data de Nascimento</th>
@@ -52,6 +55,7 @@ button.addEventListener("click", (e)=>{
                 <td>${age}</td>
                 <td>${email}</td>
                 <td>${phone}</td>
+                <td>${address}</td>
                 <td>${city}</td>
                 <td>${state}</td>
                 <td>${birthDate}</td>
@@ -71,6 +75,7 @@ buscar.addEventListener("click", (e) => {
     let age = document.getElementById("age")
     let email = document.getElementById("email")
     let phone = document.getElementById("phone")
+    let address = document.getElementById("address")
     let city = document.getElementById("city")
     let state = document.getElementById("state")
     let birthDate = document.getElementById("birthDate")
@@ -87,6 +92,7 @@ buscar.addEventListener("click", (e) => {
             age.value = dados.age
             email.value = dados.email
             phone.value = dados.phone
+            address.value = dados.address
             city.value = dados.city
             state.value = dados.state
             birthDate.value = dados.birthDate
