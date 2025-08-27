@@ -11,7 +11,7 @@ button.addEventListener("click", (e)=>{
     let dataCompra = document.getElementById("dataCompra").value
     let unitario = document.getElementById("unitario").value
     let desconto = document.getElementById("desconto").value
-    let precoFinal = document.getElementById("precoFinal").value
+    let precoFinal = (unitario - (unitario * desconto / 100)) * quant
     let formaPag = document.getElementById("formaPag").value
     let status = document.getElementById("status").value
 
