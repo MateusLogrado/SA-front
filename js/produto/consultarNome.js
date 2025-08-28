@@ -33,22 +33,22 @@ button.addEventListener("click", (e) => {
             )
 
             console.log(produtoNome)
-            if(dados.brand){
-                marca = dados.brand
+            if(produtoNome.brand){
+                marca = produtoNome.brand
             }else{
                 marca = "Marca não informada"
             }
 
 
                 html += `<tr>
-                <td>${dados.title}</td>
-                <td>${dados.description}</td>
-                <td>${dados.category}</td>
-                <td>${dados.price}</td>
-                <td>${dados.discountPercentage}</td>
-                <td>${dados.stock}</td>
+                <td>${produtoNome.title}</td>
+                <td>${produtoNome.description}</td>
+                <td>${produtoNome.category}</td>
+                <td>${produtoNome.price}</td>
+                <td>${produtoNome.discountPercentage}</td>
+                <td>${produtoNome.stock}</td>
                 <td>${marca}</td>
-                <td><img src="${dados.thumbnail}"></td>
+                <td><img src="${produtoNome.thumbnail}"></td>
             </tr>`
 
 
