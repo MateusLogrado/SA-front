@@ -69,11 +69,12 @@ buscar.addEventListener("click", (e) => {
 
     let compraId = Number(document.getElementById("compraId").value)
     
+    let produto_id = document.getElementById("produto_id")
+    let usuario_id = document.getElementById("usuario_id")
     let quant = document.getElementById("quant")
     let dataCompra = document.getElementById("dataCompra")
     let unitario = document.getElementById("unitario")
     let desconto = document.getElementById("desconto")
-    let precoFinal = document.getElementById("precoFinal")
     let formaPag = document.getElementById("formaPag")
     let status = document.getElementById("status")
 
@@ -86,11 +87,12 @@ buscar.addEventListener("click", (e) => {
 
             console.log(dados)
 
+            produto_id.value = dados.produto_id
+            usuario_id.value = dados.usuario_id
             quant.value = dados.quant
             dataCompra.value = dados.dataCompra
             unitario.value = dados.unitario
             desconto.value = dados.desconto
-            precoFinal.value = dados.precoFinal
             formaPag.value = dados.formaPag
             status.value = dados.status
 
